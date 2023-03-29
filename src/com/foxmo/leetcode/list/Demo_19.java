@@ -1,5 +1,7 @@
 package com.foxmo.leetcode.list;
 
+/*给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。*/
+
 public class Demo_19 {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode temp = new ListNode(0,head);
@@ -13,14 +15,6 @@ public class Demo_19 {
         }
         head.next = head.next.next;
         return temp.next;
-    }
-
-     public class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 
     public static int getListLen(ListNode head){
