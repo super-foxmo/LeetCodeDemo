@@ -1,4 +1,4 @@
-package com.foxmo.leetcode;
+package com.foxmo.leetcode.array;
 
 public class Demo_35 {
     public static void main(String[] args) {

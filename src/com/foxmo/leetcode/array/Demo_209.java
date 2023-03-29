@@ -1,4 +1,4 @@
-package com.foxmo.leetcode;
+package com.foxmo.leetcode.array;
 
 /*给定一个含有 n 个正整数的数组和一个正整数 target 。
 
