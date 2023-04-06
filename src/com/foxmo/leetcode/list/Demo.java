@@ -1,10 +1,8 @@
 package com.foxmo.leetcode.list;
 
 
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
+import java.util.stream.Stream;
 
 public class Demo {
     public static void main(String[] args) {
@@ -63,5 +61,27 @@ public class Demo {
 
         }
 
+        ArrayList<Integer> list = new ArrayList<>();
+        Stream<Integer> sorted = list.stream().sorted();
+        Arrays.sort(new int[]{66,4,34,523,5,234});
+
+        Stack<Integer> stack = new Stack<>();    //栈
+        stack.push(1);
+        stack.pop();
+        stack.peek();
+        stack.size();
+        Queue<Integer> queue = new LinkedList<>();  // 单向队列
+        queue.add(1);
+        queue.poll();
+        queue.peek();
+        queue.size();
+        Deque<Integer> deque = new LinkedList<>();  //双向队列
+        deque.offer(1);
+        deque.offerFirst(2);
+        deque.offerLast(3);
+        deque.contains(1);
+        deque.poll();
+        deque.peek();
+        deque.size();
     }
 }
