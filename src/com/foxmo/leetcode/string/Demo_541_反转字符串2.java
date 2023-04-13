@@ -1,7 +1,12 @@
 package com.foxmo.leetcode.string;
 
 public class Demo_541_反转字符串2 {
-    public String reverseStr(String s, int k) {
+    public static void main(String[] args) {
+        String str = reverseStr("abcdefg", 2);
+        System.out.println("abcdefg");
+        System.out.println(str);
+    }
+    public static String reverseStr(String s, int k) {
         for (int i = 0; i < s.length(); i += 2 * k) {
             if (i + k <= s.length()){
                 s = reverse(s,i,i+k);
@@ -12,11 +17,11 @@ public class Demo_541_反转字符串2 {
         return s;
     }
 
-    public String reverse(String s,int left,int right){
+    public static String reverse(String s,int left,int right){
         char[] chars = s.toCharArray();
-        while(left < right - 1){
-            char temp = chars[right];
-            chars[left] = chars[right];
+        while(left < right){
+            char temp = chars[right - 1];
+            chars[right - 1] = chars[left];
             chars[left] = temp;
             left++;
             right--;
