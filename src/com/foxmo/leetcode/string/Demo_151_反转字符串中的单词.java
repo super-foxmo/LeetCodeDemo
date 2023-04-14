@@ -5,6 +5,7 @@ public class Demo_151_反转字符串中的单词 {
         System.out.println("  fasd   ds f  dfsgs  d ");
         System.out.println(reverseWords("  fasd   ds f  dfsgs  d "));
     }
+
     public static String reverseWords(String s) {
         String str = removeSpace(s);
         String reStr = reverse(str, 0, str.length());
@@ -15,6 +16,8 @@ public class Demo_151_反转字符串中的单词 {
 
                 left = i + 1;
                 i++;
+            }else if (i == reStr.length() - 1){
+                reStr = reverse(reStr,left,i + 1);
             }
         }
         return reStr;
@@ -27,7 +30,7 @@ public class Demo_151_反转字符串中的单词 {
             if (chars[i] != ' '){
                 if (index != 0)
                     chars[index++] = ' ';
-                while(chars[i] != ' '){
+                while(i < chars.length && chars[i] != ' '){
                     chars[index] = chars[i];
                     index++;
                     i++;
