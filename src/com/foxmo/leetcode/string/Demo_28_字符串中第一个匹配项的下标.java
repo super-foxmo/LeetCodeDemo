@@ -25,7 +25,7 @@ public class Demo_28_字符串中第一个匹配项的下标 {
     }
 
     /**
-     * KMP算法：计算最长相等前后缀
+     * KMP算法：计算最长相等前后缀数组
      * @param s
      * @return
      */

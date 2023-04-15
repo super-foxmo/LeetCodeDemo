@@ -7,7 +7,7 @@ package com.foxmo.leetcode.array;
 元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。
 */
 
-public class Demo_27 {
+public class Demo_27_移除元素 {
     public int removeElement(int[] nums, int val) {
         int left = 0;
         for(int right = 0; right < nums.length;right++){
