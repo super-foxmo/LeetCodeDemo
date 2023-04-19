@@ -31,10 +31,10 @@ public class Demo_01_删除字符串中的所有相邻重复项 {
         for (int i = 0; i < size; i++) {
             result.append(stack2.pop());
         }
-
+        System.out.println(result);
         //abbbacbbcidimwnnoon
 
-//        System.out.println(removeDuplicates("abbbacbbcidimwnnoon"));
+//        System.out.println(removeDuplicates2("abbbaca"));
     }
 
     public static String removeDuplicates2(String S) {
