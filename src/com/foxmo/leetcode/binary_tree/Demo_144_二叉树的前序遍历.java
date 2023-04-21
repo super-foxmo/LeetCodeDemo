@@ -28,10 +28,11 @@ public class Demo_144_二叉树的前序遍历 {
             preorder(root.right,list);
         }
     }
+
     //迭代法
     public static void preorderByIteration(TreeNode root,List list){
-        Stack<TreeNode> stack = new Stack<>();
         if (root != null){
+            Stack<TreeNode> stack = new Stack<>();
             stack.push(root);
             TreeNode temp;
             while (!stack.empty()){
