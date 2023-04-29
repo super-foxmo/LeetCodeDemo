@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Demo_77_组合 {
     public static void main(String[] args) {
-        combine(1,1);
+        combine(4,2);
     }
 
     static LinkedList<Integer> list = new LinkedList<>();
@@ -25,7 +25,7 @@ public class Demo_77_组合 {
             lists.add(new ArrayList<>(list));
             return;
         }
-        for (int i = startIndex; i <= n; i++) {
+        for (int i = startIndex; i <= n - (k - list.size()) + 1; i++) {
             list.add(i);
             backtrack(n,k,i + 1);
             list.removeLast();
