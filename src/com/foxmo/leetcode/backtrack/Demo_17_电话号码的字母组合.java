@@ -25,7 +25,7 @@ public class Demo_17_电话号码的字母组合 {
 
     public static void main(String[] args) {
 
-        letterCombinations("23");
+        letterCombinations("");
     }
 
     public static List<String> letterCombinations(String digits) {
@@ -36,7 +36,9 @@ public class Demo_17_电话号码的字母组合 {
 
     public static void backtrack(char[] nums,int startIndex){
         if (stringBuilder.length() == nums.length){
-            list.add(stringBuilder.toString());
+            if (nums.length != 0){
+                list.add(stringBuilder.toString());
+            }
             return;
         }
         if (startIndex >= nums.length){
@@ -45,7 +47,7 @@ public class Demo_17_电话号码的字母组合 {
         char[] chars = map.get(nums[startIndex]).toCharArray();
         for (int i = 0; i < chars.length; i++) {
             stringBuilder.append(chars[i]);
-            backtrack(nums,startIndex++);
+            backtrack(nums,startIndex + 1);
             stringBuilder.deleteCharAt(stringBuilder.length() - 1);
         }
     }
