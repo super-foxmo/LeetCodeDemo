@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Demo_216_组合总和 {
+public class Demo_216_组合总和3 {
     public static void main(String[] args) {
         combinationSum3(3,7);
     }
