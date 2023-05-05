@@ -36,6 +36,7 @@ public class Demo_40_组合总和2 {
                 count -= candidates[i];
                 break;
             }
+            //去重
             if (lists.size() > 0){
                 boolean flag = true;
                 for (int j = 0; j < list.size(); j++) {
@@ -52,7 +53,7 @@ public class Demo_40_组合总和2 {
             list.add(candidates[i]);
             backtrack(candidates,target,i + 1);
             count -= candidates[i];
-            list.removeLast();
+            list.removeLast();  //回溯
         }
     }
 }
