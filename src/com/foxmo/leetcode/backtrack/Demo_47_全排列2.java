@@ -11,11 +11,12 @@ public class Demo_47_全排列2 {
 
     public static void main(String[] args) {
         Demo_47_全排列2 demo = new Demo_47_全排列2();
-        demo.permute(new int[]{1,1,2});
+        demo.permuteUnique(new int[]{1,1,2});
         for (List<Integer> list : lists) {
             System.out.println(list);
         }
     }
+
     public  List<List<Integer>> permuteUnique(int[] nums) {
         Arrays.sort(nums);
         backtrack(nums,new boolean[nums.length]);
