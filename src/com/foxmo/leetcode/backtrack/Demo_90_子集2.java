@@ -20,7 +20,7 @@ public class Demo_90_子集2 {
     public static List<List<Integer>> subsetsWithDup(int[] nums) {
         lists.add(new ArrayList<>());
         Arrays.sort(nums);
-        backtrack(nums,0,);
+        backtrack(nums,0,new boolean[nums.length]);
         return lists;
     }
 
