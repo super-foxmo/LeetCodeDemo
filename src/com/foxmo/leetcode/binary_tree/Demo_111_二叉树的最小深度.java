@@ -21,5 +21,6 @@ public class Demo_111_二叉树的最小深度 {
         }else{
             return 1;
         }
+
     }
 }
