@@ -10,7 +10,7 @@ public class Demo_零钱兑换 {
     public static int count = 0;
 
     public static void main(String[] args) {
-        backtrack(5,new int[]{1,2,5});
+        backtrack(5, new int[]{1, 2, 5});
         for (List<Integer> l : lists) {
             for (Integer integer : l) {
                 System.out.print(integer + " ");
@@ -20,23 +20,24 @@ public class Demo_零钱兑换 {
         System.out.println(count);
     }
 
-    public static void backtrack(int amount,int[] coins){
+    public static void backtrack(int amount, int[] coins) {
         if (!list.isEmpty() && getAmount(list) == amount){
             lists.add(new ArrayList<>(list));
             count++;
             return;
         }
-        if (!list.isEmpty() && getAmount(list) > amount){
-            return;
-        }
+
         for (int i = 0; i < coins.length; i++) {
+            if (getAmount(list) + coins[i] > amount) {
+                break;
+            }
             list.add(coins[i]);
-            backtrack(amount,coins);
+            backtrack(amount, coins);
             list.removeLast();
         }
     }
 
-    public static int getAmount(List<Integer> list){
+    public static int getAmount(List<Integer> list) {
         int sum = 0;
         for (Integer i : list) {
             sum += i.intValue();
