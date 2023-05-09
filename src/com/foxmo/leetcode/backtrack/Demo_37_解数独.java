@@ -3,14 +3,14 @@ package com.foxmo.leetcode.backtrack;
 public class Demo_37_解数独 {
     public static void main(String[] args) {
         solveSudoku(new char[][]{{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
-                {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
-                {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
-                {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
-                {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
-                {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
-                {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
-                {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
-                {'.', '.', '.', '.', '8', '.', '.', '7', '9'}});
+                                {'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+                                {'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+                                {'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+                                {'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+                                {'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+                                {'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+                                {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+                                {'.', '.', '.', '.', '8', '.', '.', '7', '9'}});
 
     }
 
@@ -61,42 +61,17 @@ public class Demo_37_解数独 {
                 }
             }
         }
-//        if (i < 3){
-//            if (j < 3){
-//                return isValue(3,3,c,board);
-//            }else if (j < 6){
-//                return isValue(3,6,c,board);
-//            }else if (j < 9){
-//                return isValue(3,9,c,board);
-//            }
-//        }else if (i < 6){
-//            if (j < 3){
-//                return isValue(6,3,c,board);
-//            }else if (j < 6){
-//                return isValue(6,6,c,board);
-//            }else if (j < 9){
-//                return isValue(6,9,c,board);
-//            }
-//        }else if (i < 9){
-//            if (j < 3){
-//                return isValue(9,3,c,board);
-//            }else if (j < 6){
-//                return isValue(9,6,c,board);
-//            }else if (j < 9){
-//                return isValue(9,9,c,board);
-//            }
-//        }
         return true;
     }
 
-    public static boolean isValue(int i, int j, char c, char[][] board) {
-        for (int k = i - 3; k < i; k++) {
-            for (int l = j - 3; l < j; l++) {
-                if (board[k][l] != '.' && board[k][l] == c) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
+//    public static boolean isValue(int i, int j, char c, char[][] board) {
+//        for (int k = i - 3; k < i; k++) {
+//            for (int l = j - 3; l < j; l++) {
+//                if (board[k][l] != '.' && board[k][l] == c) {
+//                    return false;
+//                }
+//            }
+//        }
+//        return true;
+//    }
 }
