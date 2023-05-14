@@ -33,6 +33,5 @@ public class HashTest {
         map.put(new Key("4"),"d");
         System.out.println(map.get(new Key("1")));  //null
 
-        this.hashCode()
     }
 }
