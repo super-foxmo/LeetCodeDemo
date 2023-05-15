@@ -2,7 +2,7 @@ package com.foxmo.leetcode.dynamic_plan;
 
 public class Demo_322_零钱兑换 {
     public static void main(String[] args) {
-        System.out.println(coinChange(new int[]{2}, 3));
+        System.out.println(coinChange(new int[]{1,4,9,16}, 12));
     }
     public static int coinChange(int[] coins, int amount) {
         //初始化dp
