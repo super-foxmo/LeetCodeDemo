@@ -1,7 +1,6 @@
 package com.foxmo.leetcode.dynamic_plan;
 
 
-
 public class Demo_213_打家劫舍2 {
     public static void main(String[] args) {
         System.out.println(rob(new int[]{1,1,3,6,7,10,7,1,8,5,9,1,4,4,3}));
