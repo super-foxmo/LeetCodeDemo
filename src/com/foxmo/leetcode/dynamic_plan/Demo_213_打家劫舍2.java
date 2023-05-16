@@ -1,21 +1,44 @@
 package com.foxmo.leetcode.dynamic_plan;
 
+
+
 public class Demo_213_打家劫舍2 {
     public static void main(String[] args) {
         System.out.println(rob(new int[]{1,1,3,6,7,10,7,1,8,5,9,1,4,4,3}));
+
+    }
+
+    public static int robAction(int[] nums, int start, int end) {
+        //初始化dp
+        int[] dp = new int[end - start];
+        int[] tNums = new int[end - start];
+        int index = 0;
+        for (int i = start; i < end; i++) {
+            tNums[index] = nums[i];
+            index++;
+        }
+        dp[0] = tNums[0];
+        dp[1] = Math.max(dp[0],tNums[1]);
+
+        for (int i = 2; i < dp.length; i++) {
+            dp[i] = Math.max(dp[i - 2] + tNums[i],dp[i - 1]);
+        }
+
+        return dp[end - start - 1];
     }
 
     public static int rob(int[] nums) {
-        //初始化dp
-        int[] dp = new int[nums.length];
-        dp[0] = nums[0];
-        dp[1] = Math.max(dp[0],nums[1]);
-
-        for (int i = 2; i < dp.length; i++) {
-            dp[i] = Math.max(dp[i - 2] + nums[i],dp[i - 1]);
+        int length = nums.length;
+        if (length < 4){
+            int max = Integer.MIN_VALUE;
+            for (int i = 0; i < length; i++) {
+                if (nums[i] > max){
+                    max = nums[i];
+                }
+            }
+            return max;
         }
-
-        return dp[nums.length - 1];
+        return Math.max(robAction(nums,0,length - 1),robAction(nums,1,length));
     }
 
 //    public static int rob(int[] nums) {
