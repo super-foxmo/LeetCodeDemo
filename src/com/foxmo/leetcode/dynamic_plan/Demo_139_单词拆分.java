@@ -25,6 +25,6 @@ public class Demo_139_单词拆分 {
             }
         }
 
-        return dp[s.length();
+        return dp[s.length()];
     }
 }
