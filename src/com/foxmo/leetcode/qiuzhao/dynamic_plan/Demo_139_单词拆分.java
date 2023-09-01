@@ -1,4 +1,4 @@
-package com.foxmo.leetcode.dynamic_plan.qiuzhao;
+package com.foxmo.leetcode.qiuzhao.dynamic_plan;
 
 
 import java.util.ArrayList;

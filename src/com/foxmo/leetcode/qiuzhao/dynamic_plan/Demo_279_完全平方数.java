@@ -1,4 +1,4 @@
-package com.foxmo.leetcode.dynamic_plan.qiuzhao;
+package com.foxmo.leetcode.qiuzhao.dynamic_plan;
 
 public class Demo_279_完全平方数 {
     public static void main(String[] args) {

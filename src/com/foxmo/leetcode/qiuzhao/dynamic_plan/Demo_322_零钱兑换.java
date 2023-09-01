@@ -1,4 +1,4 @@
-package com.foxmo.leetcode.dynamic_plan.qiuzhao;
+package com.foxmo.leetcode.qiuzhao.dynamic_plan;
 
 public class Demo_322_零钱兑换 {
     public static void main(String[] args) {

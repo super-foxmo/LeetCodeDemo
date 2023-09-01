@@ -1,4 +1,4 @@
-package com.foxmo.leetcode.dynamic_plan.qiuzhao;
+package com.foxmo.leetcode.qiuzhao.dynamic_plan;
 
 public class Demo_198_打家劫舍 {
     public static void main(String[] args) {
@@ -20,5 +20,6 @@ public class Demo_198_打家劫舍 {
             dp[j] = Math.max(dp[j - 1],dp[j - 2] + nums[j - 1]);
         }
         return dp[nums.length];
+
     }
 }

@@ -1,4 +1,4 @@
-package com.foxmo.leetcode.dynamic_plan.qiuzhao;
+package com.foxmo.leetcode.qiuzhao.dynamic_plan;
 
 public class Demo_377_组合总和 {
     public int combinationSum4(int[] nums, int target) {
