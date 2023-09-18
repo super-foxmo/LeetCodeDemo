@@ -9,10 +9,12 @@ public class Demo_46_全排列 {
     LinkedList<Integer> path = new LinkedList<>();
     List<List<Integer>> result = new ArrayList<>();
     boolean[] used;
-
     public static void main(String[] args) {
 
     }
+
+    public static native int meo();
+
 
     public List<List<Integer>> permute(int[] nums) {
         used = new boolean[nums.length];
