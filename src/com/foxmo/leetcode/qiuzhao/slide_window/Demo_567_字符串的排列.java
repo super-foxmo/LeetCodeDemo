@@ -15,7 +15,7 @@ public class Demo_567_字符串的排列 {
         } else if (s1.length() == s2.length()){
             for (int i = 0; i < s1.length(); i++) {
                 if (s2.contains(s1.charAt(i) + "")){
-                    s2.replaceFirst(s1.charAt(i) + "","");
+                    s2 = s2.replaceFirst(s1.charAt(i) + "","");
                 } else{
                     return false;
                 }
@@ -51,6 +51,6 @@ public class Demo_567_字符串的排列 {
     }
 
     public static void main(String[] args) {
-        System.out.println(checkInclusion("hello", "ooolleoooleh"));
+        System.out.println(checkInclusion("intention", "execution"));
     }
 }
